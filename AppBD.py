@@ -6,9 +6,9 @@ class AppDB:
     def __init__(self):
         self.conn = None
         self.cur = None
-        self.connect_to_db()
+        self.connect_to_bd()
 
-    def connect_to_db(self):
+    def connect_to_bd(self):
         self.conn = conexao
         self.cur = meu_cursor
         print("Conexão com o Banco de Dados aberta com sucesso!")
@@ -46,7 +46,7 @@ class AppDB:
             print("Erro ao excluir dados", error)
 
 if __name__ == '__main__':
-    app_db = AppDB()
+    app_db = AppBD()
     fake = Faker('pt_BR')
 
     for _ in range(10):
